@@ -1,4 +1,4 @@
-# Project #: P3
+# Project #: 3
 
 * Author: Abbie Sarmento, Adam Adri
 * Class: CS361 Section 2
