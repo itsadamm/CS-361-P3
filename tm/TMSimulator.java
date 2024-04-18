@@ -4,7 +4,11 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 public class TMSimulator {
-    // Main method that takes command line arguments
+    
+    /** 
+     * // Main method that takes command line arguments
+     * @param args
+     */
     public static void main(String[] args) {
         String fileName = args[0];  // Get file name from command line argument
         try {

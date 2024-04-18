@@ -16,13 +16,23 @@ public class TM {
         tape.put(headPosition, '0');  // Initialize tape with blank symbol ('0')
     }
 
-    // Method to add a transition to the Turing Machine
+    
+    /** 
+     * // Method to add a transition to the Turing Machine
+     * @param state
+     * @param readSymbol
+     * @param transition
+     */
     public void addTransition(int state, char readSymbol, Transition transition) {
         // Create a new map for the state if it doesn't already exist and add the transition
         transitions.computeIfAbsent(state, k -> new HashMap<>()).put(readSymbol, transition);
     }
 
-    // Method to process the input string and set up the tape
+    
+    /** 
+     * // Method to process the input string and set up the tape
+     * @param input
+     */
     public void processInput(String input) {
         for (char c : input.toCharArray()) {
             tape.put(headPosition++, c);  // Place each character of the input on the tape
@@ -30,7 +40,9 @@ public class TM {
         headPosition = 0;  // Reset head position to the start after setting up the input
     }
 
-    // Main method to run the Turing Machine simulation
+    /** 
+     * // Main method to run the Turing Machine simulation
+     */
     public void run() {
         while (true) {
             char readSymbol = tape.getOrDefault(headPosition, '0');  // Read the symbol at the current head position
@@ -46,7 +58,9 @@ public class TM {
         }
     }
 
-    // Method to print the contents of the tape
+    /** 
+     * // Method to print the contents of the tape
+     */
     public void printTape() {
         tape.entrySet().stream()
             .sorted(Map.Entry.comparingByKey())
