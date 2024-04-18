@@ -6,33 +6,38 @@
 
 ## Overview
 
-Concisely explain what the program does. If this exceeds a couple of
-sentences, you're going too far. Generally you should be pulling this
-right from the project specification. Please don't just cut and
-paste, but paraphrase what is stated in the project specification.
+This program simulates a bi-infinite Turing Machine (TM). The 
+bi-infinite piece shows that it has a tape that goes infinitely 
+in both directions. The TM's are deterministic and all come to a 
+halt with no reject state.
 
 ## Reflection
 
-Write a brief (2-3 paragraph) reflection describing your experience with this 
-project. Answer the following questions (but feel free to add other insights): 
-- What worked well and what was a struggle?
-- What concepts still aren't quite clear?
-- What techniques did you use to make your code easy to debug and modify?
-- What would you change about your design process?
-- If you could go back in time, what would you tell yourself about doing this project?
+The things that worked well in this project were that we had previous projects to look
+at and help us implement this assignment. Understanding how the maps work and how to use 
+them was really helpful in structuring the TM. It was also helpful to be able
+to structure this in a way that made sense to us. We were able to understand our program
+better because we had a structure that we understood. 
+
+We struggled originally with understanding how we should implement the project. 
+The project was fairly open-ended and up to us to decide how to proceed with a file
+structure and that is ultimately what worked to our advantage. Because we tried to
+simplify the code, this helped us debug and find any issues in our program. The run()
+method was the main method that presented us issues, but with some debugging, we were 
+able to figure out our issues with it fairly quickly. Overall, this was a good project,
+and we worked well together in implementing the desired functionality. 
 
 ## Compiling and Using
 
-This section should tell the user how to compile your code.  It is
-also appropriate to instruct the user how to use your code. Does your
-program require user input? If so, what does your user need to know
-about it to use it as quickly as possible?
+To compile, cd into the main directory and compile:
+$ cd tm
+$ javac *.java
+
+To run the test files provided:
+$ java TMSimulator ../test/file#.txt
 
 ## Sources used
 
-If you used any sources outside of the lecture notes, class lab files,
-or text book you need to list them here. If you looked something up on
-stackoverflow.com and fail to cite it in this section it will be
-considered plagiarism and be dealt with accordingly. So be safe CITE!
+We used our previous projects to assist in this project.
 
 ----------
