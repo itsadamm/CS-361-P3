@@ -29,8 +29,11 @@ public class TM {
     public void run() {
         while (true) {
             char readSymbol = tape.getOrDefault(headPosition, '0');
-            Transition t = transitions.get(currentState).get(readSymbol);
-            if (t == null) break;  // Stop if no transition defined (halt state)
+            Map<Character, Transition> stateTransitions = transitions.get(currentState);
+            if (stateTransitions == null || !stateTransitions.containsKey(readSymbol)) {
+                break;  // Halt if no transitions available for this state and symbol
+            }
+            Transition t = stateTransitions.get(readSymbol);
             tape.put(headPosition, t.writeSymbol);
             currentState = t.nextState;
             headPosition += (t.direction == 'R') ? 1 : -1;
